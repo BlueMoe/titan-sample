@@ -9,7 +9,7 @@ import lombok.Data;
  * 权限
  *
  * @author Michael Chow
- * @date 2020/02/06
+ * @date 2020/02/17
  */
 
 @Entity(name = "SysPermissionDO", displayName = "权限")

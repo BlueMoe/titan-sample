@@ -9,7 +9,7 @@ import lombok.Data;
  * 用户
  *
  * @author Michael Chow
- * @date 2020/02/06
+ * @date 2020/02/17
  */
 
 @Entity(name = "SysUserDO", displayName = "用户")
@@ -30,7 +30,7 @@ public class SysUserDO {
     /**
      * 密码
      */
-    @Filed(name = "password", displayName = "密码", length = 92)
+    @Filed(name = "password", displayName = "密码", length = 128)
     private String password;
 
     /**

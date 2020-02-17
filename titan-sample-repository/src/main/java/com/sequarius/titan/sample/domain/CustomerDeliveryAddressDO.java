@@ -6,32 +6,20 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 用户角色关系
+ * 客户收货地址
  *
  * @author Michael Chow
  * @date 2020/02/17
  */
 
-@Entity(name = "SysUserRoleDO", displayName = "用户角色关系")
+@Entity(name = "CustomerDeliveryAddressDO", displayName = "客户收货地址")
 @Data
-public class SysUserRoleDO {
+public class CustomerDeliveryAddressDO {
     /**
      * id
      */
     @Filed(name = "id", displayName = "id", length = 19)
     private Long id;
-
-    /**
-     * 管理员id
-     */
-    @Filed(name = "userId", displayName = "管理员id", length = 19)
-    private Long userId;
-
-    /**
-     * 角色id
-     */
-    @Filed(name = "roleId", displayName = "角色id", length = 19)
-    private Long roleId;
 
     /**
      * 创建日期
@@ -44,4 +32,22 @@ public class SysUserRoleDO {
      */
     @Filed(name = "updateTime", displayName = "更新日期", length = 19)
     private Date updateTime;
+
+    /**
+     * 客户编号
+     */
+    @Filed(name = "fkCustomerId", displayName = "客户编号", length = 19)
+    private Long fkCustomerId;
+
+    /**
+     * 联系人编号
+     */
+    @Filed(name = "fkCustomerLinkmanId", displayName = "联系人编号", length = 19)
+    private Long fkCustomerLinkmanId;
+
+    /**
+     * 收货地址
+     */
+    @Filed(name = "deliveryAddress", displayName = "收货地址", length = 255)
+    private String deliveryAddress;
 }
